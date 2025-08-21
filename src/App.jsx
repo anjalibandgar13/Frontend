@@ -4,11 +4,11 @@ import Header from './components/Header'
 import AddBlogForm from './components/AddBlogForm'
 import ListBlog from './components/ListBlog'
 import EditBlogForm from './components/EditBlogForm';
-import DeleteBlogForm from './components/deleteBlogForm'
-import Register from './components/register';
+import DeleteBlogForm from './components/DeleteBlogForm'
+import Register from './components/Register';
 import ProtectedRoute from './routes/ProtectedRoute';
 import UnProtectedRoute from './routes/UnProtectedRoute';
-import Login from './components/login';
+import Login from './components/Login';
 
 function App() {
 
