@@ -1,0 +1,23 @@
+import React from 'react'
+import { useEffect } from 'react'
+import { useNavigate, Outlet } from 'react-router-dom'
+import { EditContextProvider } from '../contents/use-blogdata'
+
+function ProtectedRoute() {
+    const navigate = useNavigate()
+    const token = localStorage.getItem("token")
+    useEffect(() => {
+        if (!token) {
+            navigate("/auth/register")
+        }
+    }, [])
+
+    return (
+        <EditContextProvider>
+
+            <Outlet />
+        </EditContextProvider>
+    )
+}
+
+export default ProtectedRoute
